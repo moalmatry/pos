@@ -6,6 +6,7 @@ import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import colors from "tailwindcss/colors";
 import { Link, usePathname } from "expo-router";
+import { colors as myColors } from "@/constants/Colors";
 
 const RailTabs = () => {
   const pathname = usePathname();
@@ -13,15 +14,17 @@ const RailTabs = () => {
   return (
     <Box className="flex-[1] border-gray-200 border-r-2">
       <Box className="items-center justify-center flex-[1] border-b-2 border-gray-200 mb-4">
-        <FontAwesome5 name="react" size={35} color={colors.orange[500]} />
+        <FontAwesome5 name="react" size={35} color={myColors.primary[500]} />
       </Box>
       <Box className="justify-around items-center flex-[7] pb-24">
         <Box className="items-center justify-center">
           <Link href="/">
             <FontAwesome5
               name="home"
-              size={30}
-              color={pathname === "/" ? colors.orange[500] : colors.gray[500]}
+              size={35}
+              color={
+                pathname === "/" ? myColors.primary[500] : colors.gray[500]
+              }
             />
           </Link>
         </Box>
@@ -29,10 +32,10 @@ const RailTabs = () => {
           <Link href="/manager-dashboard">
             <AntDesign
               name="appstore1"
-              size={30}
+              size={35}
               color={
                 pathname === "/manager-dashboard"
-                  ? colors.orange[500]
+                  ? myColors.primary[500]
                   : colors.gray[500]
               }
             />
@@ -42,9 +45,11 @@ const RailTabs = () => {
           <Link href="/products">
             <MaterialCommunityIcons
               name="package"
-              size={30}
+              size={35}
               color={
-                pathname === "/products" ? colors.orange[500] : colors.gray[500]
+                pathname === "/products"
+                  ? myColors.primary[500]
+                  : colors.gray[500]
               }
             />
           </Link>
@@ -53,9 +58,11 @@ const RailTabs = () => {
           <Link href="/settings">
             <Ionicons
               name="settings-sharp"
-              size={30}
+              size={35}
               color={
-                pathname === "/settings" ? colors.orange[500] : colors.gray[500]
+                pathname === "/settings"
+                  ? myColors.primary[500]
+                  : colors.gray[500]
               }
             />
           </Link>

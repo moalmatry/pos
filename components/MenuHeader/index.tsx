@@ -11,7 +11,7 @@ const MenuHeader = () => {
     <HStack className="h-14 items-center">
       <HStack className="flex-[3]">
         <Heading size="3xl">Point</Heading>
-        <Heading className="text-orange-500" size="3xl">
+        <Heading className="text-primary-500" size="3xl">
           sell
         </Heading>
       </HStack>
