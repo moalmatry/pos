@@ -9,12 +9,11 @@ export default function TabLayout() {
     <Navigator
       screenOptions={{
         headerShown: false,
-        // animation: "fade_from_bottom",
       }}
     >
       <SafeAreaView className="flex-1 bg-white flex-row">
         <RailTabs />
-        <Box className="bg-purple-600 flex-[15]">
+        <Box className="flex-[15]">
           <Slot />
         </Box>
       </SafeAreaView>
