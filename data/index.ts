@@ -6,6 +6,13 @@ export interface IMenu {
   image: string;
 }
 
+export interface ICasher {
+  id: string | number;
+  qty: number;
+  name: string;
+  price: number;
+  image: string;
+}
 export const menu: IMenu[] = [
   {
     id: 1,
@@ -147,5 +154,66 @@ export const menu: IMenu[] = [
     description: "Crispy Falafel, Hummus, Pickled Veggies, Pita Bread.",
     price: 24,
     image: "https://foodish-api.com/images/pasta/pasta27.jpg",
+  },
+];
+
+export const casher: ICasher[] = [
+  {
+    id: 1,
+    qty: 1,
+    name: "Grill Sandwich",
+    price: 20,
+    image:
+      "https://www.midwestliving.com/thmb/qsmMak4sE4cJsekPLhTRBahPuYg=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(1554x0:1556x2)/101497359-2_smokin-grand-slam-sandwich.pg-b3c15f5251344e08b2530ff8c230b704.jpg",
+  },
+  {
+    id: 2,
+    name: "Veggie Burger",
+    qty: 2,
+    price: 25,
+    image: "https://foodish-api.com/images/biryani/biryani57.jpg",
+  },
+
+  {
+    id: 19,
+    name: "Sushi Platter",
+    qty: 3,
+    price: 45,
+    image: "https://foodish-api.com/images/pasta/pasta4.jpg",
+  },
+  {
+    id: 17,
+    name: "Orange Juice",
+    qty: 5,
+    price: 17,
+    image: "https://foodish-api.com/images/pasta/pasta14.jpg",
+  },
+  {
+    id: 15,
+    name: "Vegetable Stir Fry",
+    qty: 7,
+    price: 29,
+    image: "https://foodish-api.com/images/pasta/pasta30.jpg",
+  },
+  {
+    id: 4,
+    name: "Pasta Alfredo",
+    qty: 10,
+    price: 35,
+    image: "https://foodish-api.com/images/biryani/biryani54.jpg",
+  },
+  {
+    id: 8,
+    name: "Caesar Salad",
+    qty: 20,
+    price: 28,
+    image: "https://foodish-api.com/images/samosa/samosa6.jpg",
+  },
+  {
+    id: 6,
+    name: "Mango Smoothie",
+    qty: 20,
+    price: 18,
+    image: "https://foodish-api.com/images/butter-chicken/butter-chicken3.jpg",
   },
 ];

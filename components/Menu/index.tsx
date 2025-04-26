@@ -8,13 +8,14 @@ import { FlatList } from "react-native";
 const Menu = () => {
   return (
     <VStack className="flex-[6] border-r border-gray-200 px-4">
-      <VStack>
+      <VStack className="web:pt-10">
         <MenuHeader />
         <Heading className="mt-10" size="2xl">
           Menu Items
         </Heading>
       </VStack>
       <FlatList
+        className="web:mt-10"
         showsVerticalScrollIndicator={false}
         data={menu}
         renderItem={({ item: { name, id, image, description, price } }) => (
