@@ -1,13 +1,14 @@
-import React from "react";
 import { Box } from "@/components/ui/box";
-import FontAwesome5 from "@expo/vector-icons/FontAwesome5";
-import AntDesign from "@expo/vector-icons/AntDesign";
-import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
-import Ionicons from "@expo/vector-icons/Ionicons";
-import colors from "tailwindcss/colors";
-import { Link, usePathname } from "expo-router";
 import { colors as myColors } from "@/constants/Colors";
-
+import AntDesign from "@expo/vector-icons/AntDesign";
+import FontAwesome5 from "@expo/vector-icons/FontAwesome5";
+import Ionicons from "@expo/vector-icons/Ionicons";
+import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
+import Octicons from "@expo/vector-icons/Octicons";
+import { usePathname } from "expo-router";
+import React from "react";
+import colors from "tailwindcss/colors";
+import Link from "./components/link";
 const RailTabs = () => {
   const pathname = usePathname();
 
@@ -17,8 +18,9 @@ const RailTabs = () => {
         <FontAwesome5 name="react" size={35} color={myColors.primary[500]} />
       </Box>
       <Box className="justify-around items-center flex-[7] pb-24">
-        <Box className="items-center justify-center">
-          <Link href="/">
+        <Link
+          href="/"
+          icon={
             <FontAwesome5
               name="home"
               size={35}
@@ -26,10 +28,12 @@ const RailTabs = () => {
                 pathname === "/" ? myColors.primary[500] : colors.gray[500]
               }
             />
-          </Link>
-        </Box>
-        <Box className="items-center justify-center">
-          <Link href="/manager-dashboard">
+          }
+        />
+
+        <Link
+          href="/manager-dashboard"
+          icon={
             <AntDesign
               name="appstore1"
               size={35}
@@ -39,10 +43,12 @@ const RailTabs = () => {
                   : colors.gray[500]
               }
             />
-          </Link>
-        </Box>
-        <Box className="items-center justify-center">
-          <Link href="/products">
+          }
+        />
+
+        <Link
+          href="/products"
+          icon={
             <MaterialCommunityIcons
               name="package"
               size={35}
@@ -52,10 +58,12 @@ const RailTabs = () => {
                   : colors.gray[500]
               }
             />
-          </Link>
-        </Box>
-        <Box className="items-center justify-center">
-          <Link href="/settings">
+          }
+        />
+
+        <Link
+          href="/settings"
+          icon={
             <Ionicons
               name="settings-sharp"
               size={35}
@@ -65,8 +73,14 @@ const RailTabs = () => {
                   : colors.gray[500]
               }
             />
-          </Link>
-        </Box>
+          }
+        />
+
+        <Link
+          replace
+          href="/(registration)"
+          icon={<Octicons name="sign-out" size={35} color={colors.red[500]} />}
+        />
       </Box>
     </Box>
   );

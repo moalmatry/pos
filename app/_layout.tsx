@@ -37,11 +37,9 @@ export default function RootLayout() {
     <GluestackUIProvider mode="light">
       <StatusBar style="auto" />
       <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
-        <Stack
-          // layout={({ children }) => <View>{children}</View>}
-          screenOptions={{ headerShown: false }}
-        >
-          <Stack.Screen name="(pos)" options={{ headerShown: false }} />
+        <Stack screenOptions={{ headerShown: false }}>
+          <Stack.Screen name="(registration)" />
+          <Stack.Screen name="(pos)" />
           <Stack.Screen name="+not-found" />
         </Stack>
       </ThemeProvider>

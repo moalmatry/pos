@@ -4,7 +4,7 @@ import { Navigator, Slot } from "expo-router";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-export default function TabLayout() {
+const TabLayout = () => {
   return (
     <Navigator
       screenOptions={{
@@ -19,4 +19,5 @@ export default function TabLayout() {
       </SafeAreaView>
     </Navigator>
   );
-}
+};
+export default TabLayout;
