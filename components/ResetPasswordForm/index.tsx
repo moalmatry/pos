@@ -1,20 +1,22 @@
 import CustomInput from "@/components/CustomInput";
-import { Heading } from "@/components/ui/heading";
-import { AlertCircleIcon, AtSignIcon } from "@/components/ui/icon";
-import { VStack } from "@/components/ui/vstack";
-import { Link, useRouter } from "expo-router";
-import React from "react";
 import { Button, ButtonText } from "@/components/ui/button";
+import { Heading } from "@/components/ui/heading";
+import { AlertCircleIcon, AtSignIcon, LockIcon } from "@/components/ui/icon";
+import { VStack } from "@/components/ui/vstack";
+import { useRouter } from "expo-router";
+import React from "react";
 
 const ResetPasswordForm = () => {
   const router = useRouter();
-  const submitHandler = () => {};
+  const submitHandler = () => {
+    router.push("/(pos)");
+  };
   return (
     <VStack className="w-full px-36 gap-16">
       <VStack>
-        <Heading size="3xl">Forget Password</Heading>
+        <Heading size="3xl">Reset Password</Heading>
         <Heading size="lg">
-          Please enter your email and we will send reset code to you
+          A code has been sent to you please check your email!
         </Heading>
       </VStack>
       <VStack className="gap-8">
@@ -24,18 +26,33 @@ const ResetPasswordForm = () => {
           isInvalid={false}
           icon={AtSignIcon}
           errorIcon={AlertCircleIcon}
-          errorMessage="Please enter valid email"
+          errorMessage="Please enter valid verification code"
           value=""
-          placeholder="Email"
+          placeholder="Verification Code"
           onChangeText={() => {}}
         />
-
-        <Link
-          className="self-end text-primary-500 font-bold text-lg"
-          href="/forget-password"
-        >
-          Signin?
-        </Link>
+        <CustomInput
+          isRequired
+          type="text"
+          isInvalid={false}
+          icon={LockIcon}
+          errorIcon={AlertCircleIcon}
+          errorMessage="Please enter valid email"
+          value=""
+          placeholder="Password"
+          onChangeText={() => {}}
+        />
+        <CustomInput
+          isRequired
+          type="text"
+          isInvalid={false}
+          icon={LockIcon}
+          errorIcon={AlertCircleIcon}
+          errorMessage="Please enter valid email"
+          value=""
+          placeholder="Confirm Password"
+          onChangeText={() => {}}
+        />
       </VStack>
       <Button
         // className="w-full mt-4"

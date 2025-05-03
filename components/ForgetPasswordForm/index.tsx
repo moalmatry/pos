@@ -36,7 +36,7 @@ const ForgetPasswordForm = () => {
 
         <Link
           className="self-end text-primary-500 font-bold text-lg"
-          href="/forget-password"
+          href="/(registration)"
         >
           Signin?
         </Link>

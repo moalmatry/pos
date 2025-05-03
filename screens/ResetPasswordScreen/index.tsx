@@ -1,4 +1,4 @@
-import ForgetPasswordForm from "@/components/ForgetPasswordForm";
+import ResetPasswordForm from "@/components/ResetPasswordForm";
 import { Box } from "@/components/ui/box";
 import { Divider } from "@/components/ui/divider";
 import { HStack } from "@/components/ui/hstack";
@@ -13,7 +13,7 @@ const ResetPasswordScreen = () => {
       </Box>
       <Divider orientation="vertical" />
       <Box className="flex-1 items-center justify-center">
-        <ForgetPasswordForm />
+        <ResetPasswordForm />
       </Box>
     </HStack>
   );
