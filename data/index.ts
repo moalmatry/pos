@@ -13,6 +13,13 @@ export interface ICasher {
   price: number;
   image: string;
 }
+
+export interface IOrder {
+  id: number;
+  status: "Paid" | "Unpaid";
+  totalPrice: number;
+}
+
 export const menu: IMenu[] = [
   {
     id: 1,
@@ -217,3 +224,90 @@ export const casher: ICasher[] = [
     image: "https://foodish-api.com/images/butter-chicken/butter-chicken3.jpg",
   },
 ];
+
+export const order: IOrder[] = [
+  {
+    id: 1,
+    status: "Paid",
+    totalPrice: 250,
+  },
+  {
+    id: 2,
+    status: "Paid",
+    totalPrice: 5000,
+  },
+
+  {
+    id: 3,
+    status: "Paid",
+    totalPrice: 500,
+  },
+  {
+    id: 4,
+    status: "Paid",
+    totalPrice: 1000,
+  },
+  {
+    id: 5,
+    status: "Paid",
+    totalPrice: 10000,
+  },
+  {
+    id: 6,
+    status: "Paid",
+    totalPrice: 15000,
+  },
+  {
+    id: 7,
+    status: "Paid",
+    totalPrice: 17000,
+  },
+];
+
+export const orderDetails = {
+  id: 1,
+  status: "Paid",
+  items: [
+    {
+      id: 1,
+      qty: 5,
+      name: "Grill Sandwich",
+      description: "Beetroot, Potato, Bell Pepper, Sandwich Masala.",
+      price: 20,
+      image:
+        "https://www.midwestliving.com/thmb/qsmMak4sE4cJsekPLhTRBahPuYg=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(1554x0:1556x2)/101497359-2_smokin-grand-slam-sandwich.pg-b3c15f5251344e08b2530ff8c230b704.jpg",
+    },
+    {
+      id: 19,
+      qty: 3,
+      name: "Sushi Platter",
+      description: "Fresh Salmon, Tuna, Avocado, Rice Rolls.",
+      price: 45,
+      image: "https://foodish-api.com/images/pasta/pasta4.jpg",
+    },
+    {
+      id: 16,
+      qty: 8,
+      name: "Ice Cream Sundae",
+      description: "Vanilla Ice Cream, Chocolate Sauce, Nuts.",
+      price: 25,
+      image: "https://foodish-api.com/images/pasta/pasta25.jpg",
+    },
+    {
+      id: 20,
+      qty: 10,
+      name: "Falafel Wrap",
+      description: "Crispy Falafel, Hummus, Pickled Veggies, Pita Bread.",
+      price: 24,
+      image: "https://foodish-api.com/images/pasta/pasta27.jpg",
+    },
+    {
+      id: 18,
+      qty: 12,
+      name: "Strawberry Cheesecake",
+      description: "Creamy Cheesecake, Strawberry Topping, Biscuit Base.",
+      price: 31,
+      image: "https://foodish-api.com/images/pasta/pasta9.jpg",
+    },
+  ],
+};

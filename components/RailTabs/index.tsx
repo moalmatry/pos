@@ -9,6 +9,7 @@ import { usePathname } from "expo-router";
 import React from "react";
 import colors from "tailwindcss/colors";
 import Link from "./components/link";
+import Foundation from "@expo/vector-icons/Foundation";
 const RailTabs = () => {
   const pathname = usePathname();
 
@@ -26,6 +27,21 @@ const RailTabs = () => {
               size={35}
               color={
                 pathname === "/" ? myColors.primary[500] : colors.gray[500]
+              }
+            />
+          }
+        />
+
+        <Link
+          href="/orders"
+          icon={
+            <Foundation
+              name="clipboard-notes"
+              size={40}
+              color={
+                pathname === "/orders"
+                  ? myColors.primary[500]
+                  : colors.gray[500]
               }
             />
           }
