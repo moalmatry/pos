@@ -38,8 +38,8 @@ export default function RootLayout() {
       <StatusBar style="auto" />
       <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
         <Stack screenOptions={{ headerShown: false }}>
-          <Stack.Screen name="(registration)" />
           <Stack.Screen name="(pos)" />
+          <Stack.Screen name="(registration)" />
           <Stack.Screen name="+not-found" />
         </Stack>
       </ThemeProvider>

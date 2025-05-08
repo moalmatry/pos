@@ -1,11 +1,10 @@
-import React from "react";
 import { Box } from "@/components/ui/box";
-import { Text } from "@/components/ui/text";
-import { OrderDetailsItemProps } from "../types";
+import { Heading } from "@/components/ui/heading";
 import { HStack } from "@/components/ui/hstack";
 import { Image } from "@/components/ui/image";
-import { Heading } from "@/components/ui/heading";
 import { formatNumber } from "@/lib/util";
+import React from "react";
+import { OrderDetailsItemProps } from "../types";
 
 const OrderDetailsItem = ({
   name,

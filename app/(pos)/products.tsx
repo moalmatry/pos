@@ -1,13 +1,9 @@
-import { Box } from "@/components/ui/box";
-import { Text } from "@/components/ui/text";
+import ProductsScreen from "@/screens/ProductsScreen";
 import React from "react";
 
 const products = () => {
-  return (
-    <Box>
-      <Text>products</Text>
-    </Box>
-  );
+  // NOTE: Tables not working on web GlueStack
+  return <ProductsScreen />;
 };
 
 export default products;
