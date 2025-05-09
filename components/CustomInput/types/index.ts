@@ -5,7 +5,7 @@ import { SvgProps } from "react-native-svg";
 export interface CustomInputProps {
   type: "text" | "password";
   isInvalid: boolean;
-  icon: IIconComponentType<
+  icon?: IIconComponentType<
     | SvgProps
     | {
         fill?: ColorValue;
