@@ -22,7 +22,7 @@ const ProductsScreen = () => {
               showsVerticalScrollIndicator={false}
               showsHorizontalScrollIndicator={false}
               data={productsTable}
-              contentContainerClassName="pb-[400px]"
+              contentContainerClassName="pb-[200px]"
               estimatedItemSize={20}
               // className="mb-[400px]"
               // contentContainerClassName="pb-96"

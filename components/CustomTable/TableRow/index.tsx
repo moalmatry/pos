@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { TableData, TableRow as GlueStackRow } from "@/components/ui/table";
 import { TableRowProps } from "../types";
 import { cn, formatNumber } from "@/lib/util";
@@ -11,6 +11,7 @@ import {
 import { EditIcon, TrashIcon } from "@/components/ui/icon";
 import { Box } from "@/components/ui/box";
 import { Text } from "@/components/ui/text";
+import Dialog from "@/components/Dialog";
 
 const TableRow = ({
   product,
@@ -22,6 +23,8 @@ const TableRow = ({
   status,
   category,
 }: TableRowProps) => {
+  const [showDialog, setShowDialog] = useState(false);
+
   return (
     // <div>
     <GlueStackRow className="w-full h-28">
@@ -69,10 +72,24 @@ const TableRow = ({
             <ButtonText>Edit</ButtonText>
           </Button>
 
-          <Button variant="link" action="negative" onPress={onDelete}>
-            <ButtonIcon as={TrashIcon} />
-            <ButtonText>Delete</ButtonText>
-          </Button>
+          <Dialog
+            setShowAlertDialog={setShowDialog}
+            showAlertDialog={showDialog}
+            onDelete={() => {}}
+            buttonElement={
+              <Button
+                variant="link"
+                action="negative"
+                onPress={() => {
+                  setShowDialog(true);
+                  if (onDelete) onDelete();
+                }}
+              >
+                <ButtonIcon as={TrashIcon} />
+                <ButtonText>Delete</ButtonText>
+              </Button>
+            }
+          />
         </ButtonGroup>
       </TableData>
     </GlueStackRow>

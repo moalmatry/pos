@@ -1,11 +1,21 @@
+import Dialog from "@/components/Dialog";
 import { Box } from "@/components/ui/box";
-import { Text } from "@/components/ui/text";
+import { Button, ButtonText } from "@/components/ui/button";
 import React from "react";
 
 const ManagerDashboard = () => {
+  const [showDialog, setShowDialog] = React.useState(false);
   return (
     <Box>
-      <Text>ManagerDashboard</Text>
+      <Dialog
+        buttonElement={
+          <Button onPress={() => setShowDialog(true)}>
+            <ButtonText>Hello world</ButtonText>
+          </Button>
+        }
+        setShowAlertDialog={setShowDialog}
+        showAlertDialog={showDialog}
+      />
     </Box>
   );
 };
